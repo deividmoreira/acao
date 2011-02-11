@@ -54,7 +54,7 @@ sub get_volume : Chained('base') : PathPart('') : CaptureArgs(1) {
     $c->stash->{id_volume} = $id_volume
       or $c->detach('/public/default');
 
-    $c->model('Volume')->pode_listar_volume($id_volume)
+    $c->model('Volume')->pode_ver_volume($id_volume)
       or $c->detach('/public/default');
 }
 

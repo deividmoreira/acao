@@ -400,7 +400,7 @@ user logado pode LISTAR Dossies
 
 sub pode_listar_dossie {
     my ( $self, $id_volume ) = @_;
-    return $self->_checa_autorizacao_volume_dossie( $id_volume, 'listar' )
+    return $self->_checa_autorizacao_dossie( $id_volume, 'listar' )
       && $role_listar ~~ @{ $self->user->memberof };
 }
 
